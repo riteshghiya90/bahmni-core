@@ -205,6 +205,19 @@
             <groupId>org.openmrs.module</groupId>
             <artifactId>emrapi-api-1.12</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jms</artifactId>
+            <version>5.2.14.RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.jms</groupId>
+            <artifactId>jakarta.jms-api</artifactId>
+            <version>2.0.3</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
