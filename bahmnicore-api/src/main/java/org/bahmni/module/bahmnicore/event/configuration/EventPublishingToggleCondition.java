@@ -1,4 +1,4 @@
-package org.bahmni.module.bahmnicore.event.toggle;
+package org.bahmni.module.bahmnicore.event.configuration;
 
 
 import org.springframework.context.annotation.Condition;
@@ -7,7 +7,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EventPublishToggle implements Condition {
+public class EventPublishingToggleCondition implements Condition {
 
     @Override
     public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
