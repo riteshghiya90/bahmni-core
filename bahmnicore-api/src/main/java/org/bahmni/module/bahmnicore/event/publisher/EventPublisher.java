@@ -23,12 +23,12 @@ public class EventPublisher {
 
     @EventListener
     public void onApplicationEvent(Event event) {
-        String jsonPayload = toJsonPayload(event);
+        String jsonPayload = toJsonPayload(event.payload);
         jmsTemplate.send(event.eventType, session -> session.createTextMessage(jsonPayload));
-        log.info("Published Message" + event.eventType +  " : " + event.eventId + " : " + event.payloadId);
+        log.debug("Published Message" + event.payload);
     }
 
-    private String toJsonPayload(Event event) {
+    private String toJsonPayload(Object event) {
         String payload;
         try {
             payload = objectMapper.writeValueAsString(event);
